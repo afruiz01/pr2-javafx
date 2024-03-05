@@ -6,10 +6,7 @@ import java.util.ResourceBundle;
 import co.edu.uniquindio.cliente.clienteapp.model.Cliente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-
+import javafx.scene.control.*;
 
 
 public class ClienteController {
@@ -50,6 +47,27 @@ public class ClienteController {
         agregarCliente();
 
     }
+     @FXML
+     private Label myLabel;
+
+    @FXML
+    private RadioButton rButtonClienteBasico, rButtonClientePremium, rButtonClienteVip;
+
+    public void getTipoCliente(ActionEvent event){
+
+        if(rButtonClienteBasico.isSelected()){
+            myLabel.setText(rButtonClienteBasico.getText());
+            System.out.println("Cliente Basico");
+        }
+        else if(rButtonClientePremium.isSelected()){
+            myLabel.setText(rButtonClientePremium.getText());
+            System.out.println("Cliente Premium");
+        }
+        else if(rButtonClienteVip.isSelected()){
+            myLabel.setText(rButtonClienteVip.getText());
+            System.out.println("Cliente Vip");
+        }
+    }
 
 
 
@@ -67,10 +85,32 @@ public class ClienteController {
         cliente.setTelefonoFijo(txtTelefonoFijo.getText());
         cliente.setTelefonoCelular(txtCelular.getText());
 
+
         txtResultado.setText(cliente.toString());
 
 
 
+
+
     }
+
+   // @FXML
+    //private RadioButton rButtonClientePremium;
+    //public void getClientePremium(ActionEvent actionEvent) {
+      //  if(rButtonClientePremium.isSelected()){
+        //    myLabel.setText(rButtonClientePremium.getText());
+        //}
+
+    //}
+    //@FXML
+    //private RadioButton rButtonClienteVip;
+    //public void getClienteVip(ActionEvent actionEvent) {
+    //    if(rButtonClienteVip.isSelected()){
+     //       myLabel.setText(rButtonClienteVip.getText());
+    //    }
+    //}
+
+    public void geTipoCliente(ActionEvent actionEvent) {
+ }
 }
 
