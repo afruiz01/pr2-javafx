@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.cliente.clienteapp.controller.ClienteController">
+   <children>
+      <SplitPane dividerPositions="0.7388392857142857" orientation="VERTICAL" prefHeight="450.0" prefWidth="646.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="268.0" prefWidth="644.0">
+               <children>
+                  <Button fx:id="btnAgregarCliente" layoutX="274.0" layoutY="289.0" mnemonicParsing="false" onAction="#onAgregarCliente" text="Agregar Cliente" />
+                  <Label layoutX="11.0" layoutY="53.0" text="Nombre:" />
+                  <TextField fx:id="txtNombre" layoutX="97.0" layoutY="49.0" prefHeight="25.0" prefWidth="226.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Informacion del cliente" />
+                  <Separator layoutX="3.0" layoutY="35.0" prefHeight="1.0" prefWidth="631.0" />
+                  <Label layoutX="11.0" layoutY="178.0" text="Telefono Fijo:" />
+                  <Label layoutX="332.0" layoutY="111.0" text="Edad:" />
+                  <Label layoutX="14.0" layoutY="111.0" text="Cedula:" />
+                  <Label layoutX="332.0" layoutY="53.0" text="Apellido:" />
+                  <Label layoutX="332.0" layoutY="178.0" text="Celular:" />
+                  <TextField fx:id="txtCedula" layoutX="97.0" layoutY="107.0" prefHeight="25.0" prefWidth="226.0" />
+                  <TextField fx:id="txtTelefonoFijo" layoutX="97.0" layoutY="174.0" prefHeight="25.0" prefWidth="226.0" />
+                  <TextField fx:id="txtApellido" layoutX="394.0" layoutY="49.0" prefHeight="25.0" prefWidth="226.0" />
+                  <TextField fx:id="txtEdad" layoutX="394.0" layoutY="107.0" prefHeight="25.0" prefWidth="226.0" />
+                  <TextField fx:id="txtCelular" layoutX="394.0" layoutY="174.0" prefHeight="25.0" prefWidth="226.0" />
+                  <Separator layoutX="9.0" layoutY="223.0" prefHeight="0.0" prefWidth="644.0" />
+                  <RadioButton fx:id="rButtonClienteBasico" layoutX="50.0" layoutY="264.0" mnemonicParsing="false" onAction="#getTipoCliente" text="Cliente basico">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="TipoCliente" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rButtonClientePremium" layoutX="268.0" layoutY="264.0" mnemonicParsing="false" onAction="#geTipoCliente" text="Cliente premium" toggleGroup="$TipoCliente" />
+                  <RadioButton fx:id="rButtonClienteVip" layoutX="507.0" layoutY="264.0" mnemonicParsing="false" onAction="#getTipoCliente" text="Cliente vip" toggleGroup="$TipoCliente" />
+                  <Label fx:id="myLabel" layoutX="248.0" layoutY="237.0" text="Seleccione el tipo de cliente:" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="15.0" prefWidth="644.0">
+               <children>
+                  <TextArea fx:id="txtResultado" layoutX="12.0" layoutY="14.0" prefHeight="87.0" prefWidth="620.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
